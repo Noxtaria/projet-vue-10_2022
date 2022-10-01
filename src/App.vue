@@ -9,12 +9,10 @@
 
 <script>
 
-import NavigationVue from './components/Navigation.vue';
 import Navigation from './components/Navigation.vue';
 
 export default {
     name: "App",
-    comments: { NavigationVue },
     components: { Navigation }
 }
 
