@@ -12,14 +12,17 @@ const router = new VueRouter({
   routes: [
     {
     path: '/',
+    name: "index",
     component: IndexComponent
     },
     {
     path: '/form',
+    name: "form",
     component: FormComponent
     },
     {
     path: '/result',
+    name: "result",
     component: ResultComponent
     },
     {
