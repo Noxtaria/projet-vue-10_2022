@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from "./App.vue"
 import VueRouter from 'vue-router'
 import IndexComponent from "./pages/Index.vue"
-import FormComponent from "./pages/Form.vue"
-import ResultComponent from "./pages/Result.vue"
+import FormComponent from "./components/Form.vue"
+import ResultComponent from "./components/Result.vue"
 
 Vue.use(VueRouter)
 
