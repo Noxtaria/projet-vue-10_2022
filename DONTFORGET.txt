@@ -1,0 +1,34 @@
+Form.vue
+
+Data(){
+    return {
+      form: {
+        nom_commercial: '',
+        nom_juridique: '',
+        prospect: '',
+        adresse: '',
+        ville: '',
+        cp: '',
+        telephone: '',
+        email: '',
+        secteur: ''
+      }
+    }
+}
+
+
+methods: {
+    handleSubmit() {
+      console.log(`nom_commercial : "${this.form.nom_commercial}",
+                   nom_juridique : "${this.form.nom_juridique}",
+                   prospect : "${this.form.prospect}",
+                   adresse : "${this.form.adresse}",
+                   ville : "${this.form.ville}",
+                   cp : "${this.form.cp}",
+                   telephone : "${this.form.telephone}",
+                   email : "${this.form.email}",
+                   secteur : "${this.form.secteur}"
+                  `);
+}
+
+

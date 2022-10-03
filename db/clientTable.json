@@ -1,0 +1,63 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "nom_commercial": "",
+      "nom_juridique": "",
+      "prospect": "",
+      "adresse": "",
+      "ville": "",
+      "cp": "",
+      "telephone": "",
+      "email": "",
+      "secteur": ""
+    },
+    {
+      "nom_commercial": "test",
+      "nom_juridique": "test",
+      "prospect": "test",
+      "adresse": "test",
+      "ville": "test",
+      "cp": "test",
+      "telephone": "test",
+      "email": "test",
+      "secteur": "test",
+      "id": 2
+    },
+    {
+      "nom_juridique": "suis",
+      "prospect": "un",
+      "adresse": "test",
+      "ville": "merci",
+      "cp": "de",
+      "telephone": "ne",
+      "email": "noxtariadev@gmail.com",
+      "secteur": "critiquer",
+      "id": 3
+    },
+    {
+      "nom_commercial": "Je",
+      "nom_juridique": "suis",
+      "prospect": "",
+      "adresse": "",
+      "ville": "",
+      "cp": "",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "id": 4
+    },
+    {
+      "nom_commercial": "Je",
+      "nom_juridique": "test",
+      "prospect": "",
+      "adresse": "test",
+      "ville": "",
+      "cp": "de",
+      "telephone": "",
+      "email": "",
+      "secteur": "",
+      "id": 5
+    }
+  ]
+}
