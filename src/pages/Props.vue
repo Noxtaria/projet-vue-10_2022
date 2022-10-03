@@ -2,7 +2,7 @@
 
   <main>
     <div>
-      <h1>Bienvenue sur l'index du projet Vue</h1>
+      <h1>Les Props</h1>
   
       <FormProps @enregistrer="saveClient"/>
       <Result v-for="c in clients" :key="c.id" :client="c"/>
@@ -17,7 +17,7 @@
 import Result from '@/components/Result.vue';
 import FormProps from '@/components/FormProps.vue';
 export default {
-  name: "IndexComponent",
+  name: "PropsComponent",
   components: { Result, FormProps },
   data(){
     return{

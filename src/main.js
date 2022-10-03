@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from "./App.vue"
 import VueRouter from 'vue-router'
-import IndexComponent from "./pages/Index.vue"
-import FormComponent from "./components/Form.vue"
-import ResultComponent from "./components/Result.vue"
+import PropsComponent from "./pages/Props.vue"
+import VueXComponent from "./pages/VueX.vue"
+import BulmaComponent from "./pages/Bulma.vue"
 
 Vue.use(VueRouter)
 
@@ -12,18 +12,18 @@ const router = new VueRouter({
   routes: [
     {
     path: '/',
-    name: "index",
-    component: IndexComponent
+    name: "props",
+    component: PropsComponent
     },
     {
-    path: '/form',
-    name: "form",
-    component: FormComponent
+    path: '/vuex',
+    name: "vuex",
+    component: VueXComponent
     },
     {
-    path: '/result',
-    name: "result",
-    component: ResultComponent
+    path: '/bulma',
+    name: "bulma",
+    component: BulmaComponent
     },
     {
     path: '*',

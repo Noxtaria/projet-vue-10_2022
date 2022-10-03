@@ -2,13 +2,13 @@
     <nav>
       <ul>
         <li>
-          <router-link :to="{name: 'index'}">Index</router-link>
+          <router-link :to="{name: 'props'}">Props</router-link>
         </li>
         <li>
-          <router-link :to="{name: 'form'}">Form</router-link>
+          <router-link :to="{name: 'vuex'}">VueX</router-link>
         </li>
         <li>
-          <router-link :to="{name: 'result'}">Result</router-link>
+          <router-link :to="{name: 'bulma'}">Bulma</router-link>
         </li>
       </ul>
     </nav>
