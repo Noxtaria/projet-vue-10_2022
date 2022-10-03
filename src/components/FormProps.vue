@@ -1,10 +1,48 @@
 <template>
 
-    <main>
+    <div>
+      <form @submit.prevent="createClient()">
         <div>
-            
+          <label for="nom_commercial">Nom Commercial</label>
+          <input id="nom_commercial" v-model.trim="new_client.nom_commercial" />
         </div>
-    </main>
+        <div>
+          <label for="nom_juridique">Nom Juridique</label>
+          <input id="nom_juridique" v-model.trim="new_client.nom_juridique" />
+        </div>
+        <div>
+          <label for="prospect">Prospect</label>
+          <input id="prospect" v-model.trim="new_client.prospect" />
+        </div>
+        <div>
+          <label for="adresse">Adresse</label>
+          <input id="adresse" v-model.trim="new_client.adresse" />
+        </div>
+        <div>
+          <label for="ville">Ville</label>
+          <input id="ville" v-model.trim="new_client.ville" />
+        </div>
+        <div>
+          <label for="cp">CP</label>
+          <input id="cp" v-model.trim="new_client.cp" />
+        </div>
+        <div>
+          <label for="telephone">Téléphone</label>
+          <input id="telephone" v-model.trim="new_client.telephone" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" v-model.trim="new_client.email" />
+        </div>
+        <div>
+          <label for="secteur">Secteur</label>
+          <input id="secteur" v-model.trim="new_client.secteur" />
+        </div>
+        <p>
+          <button>Enregistrer</button>
+        </p>
+      </form>
+    </div>
   
   
   
@@ -12,20 +50,29 @@
     
   <script>
 
+  
   export default {
     name: 'FormComponent',
-    props: {
-        client: Object
-    },
+    data:() => ({
+      id: 1,
+      error: '',
+      new_client: {
+        nom_commercial: '',
+        nom_juridique: '',
+        prospect: '',
+        adresse: '',
+        ville: '',
+        cp: '',
+        telephone: '',
+        email: '',
+        secteur: ''
+      }
+      
+    }),
     methods: {
   
       createClient() {
-  
-        axios.post(this.$emit('ajouter'), this.new_client)
-            .then(response => {
-              console.log("Le client vient d'être créé : ", response.data);
-            })
-            .catch(err => console.log(`Quelque chose s'est mal passé : ${err.message}`))
+        this.$emit('enregistrer', this.new_client)
       }
     }
   }
