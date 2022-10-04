@@ -7,7 +7,7 @@
       {{getClients}}
 
       <FormVueX />
-      <Result />
+      <ResultVueX />
 
     </div>
   </main>
@@ -19,7 +19,7 @@
 <script>
 
 import { mapGetters } from "vuex"
-import Result from "@/components/VueX/Result.vue";
+import ResultVueX from "@/components/VueX/ResultVueX.vue";
 import FormVueX from "@/components/VueX/FormVueX.vue";
 
 export default {
@@ -27,7 +27,7 @@ export default {
   computed: {
     ...mapGetters(["getClients"])
   },
-  components: { Result, FormVueX }
+  components: { ResultVueX, FormVueX }
 }
 </script>
 
