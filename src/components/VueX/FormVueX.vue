@@ -1,7 +1,7 @@
 <template>
 
 <div>
-      <form @submit.prevent="createClient(new_client)" >
+      <form @submit.prevent="createClients(new_client)" >
         <div>
           <label for="nom_commercial">Nom Commercial</label>
           <input id="nom_commercial" v-model.trim="new_client.nom_commercial" />
@@ -71,7 +71,9 @@ import { mapMutations } from 'vuex';
     }),
     methods: {
 
-      ...mapMutations(["createClients"])
+      ...mapMutations(["createClients"]),
+
+
 
 
     },

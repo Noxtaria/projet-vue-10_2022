@@ -28,9 +28,6 @@ export default new Vuex.Store({
     createClients(state, new_client) {
       this.state.client = new_client
     }
-    
-  },
-  actions: {
-    
+
   }
 })
