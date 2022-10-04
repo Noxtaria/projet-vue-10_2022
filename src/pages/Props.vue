@@ -5,7 +5,7 @@
       <h1>Les Props</h1>
   
       <FormProps @enregistrer="saveClient"/>
-      <Result v-for="c in clients" :key="c.id" :client="c"/>
+      <ResultProps v-for="c in clients" :key="c.id" :client="c"/>
     </div>
   </main>
 
@@ -14,11 +14,11 @@
 </template>
   
 <script>
-import Result from '@/components/Props/Result.vue';
+import ResultProps from '@/components/Props/ResultProps.vue';
 import FormProps from '@/components/Props/FormProps.vue';
 export default {
   name: "PropsComponent",
-  components: { Result, FormProps },
+  components: { ResultProps, FormProps },
   data(){
     return{
       clients: []

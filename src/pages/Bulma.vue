@@ -1,18 +1,24 @@
 <template>
 
-    <main>
-      <div>
-        <h1>Bulma</h1>
+  <main>
+    <div>
+      <h1>Bulma</h1>
+
+      <Form />
+      <Result />
+
+    </div>
+  </main>
+
+
+
+</template>
     
-      </div>
-    </main>
-  
-  
-  
-  </template>
-    
-  <script>
-  export default {
-    name: "BulmaComponent"
-  }
-  </script>
+<script>
+import Form from '@/components/Bulma/Form.vue';
+import Result from '@/components/Bulma/Result.vue';
+export default {
+  name: "BulmaComponent",
+  components: { Form, Result }
+}
+</script>
