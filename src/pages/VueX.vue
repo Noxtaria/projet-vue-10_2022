@@ -1,18 +1,37 @@
 <template>
 
-    <main>
-      <div>
-        <h1>VueX</h1>
+  <main>
+    <div>
+      <h1>VueX</h1>
 
-      </div>
-    </main>
-  
-  
-  
-  </template>
+      {{getClients}}
+
+
+      <FormProps />
+      <Result />
+
+    </div>
+  </main>
+
+
+
+</template>
     
-  <script>
-  export default {
-    name: "VueXComponent"
-    }
-  </script>
+<script>
+
+import { mapGetters } from "vuex"
+import FormProps from "@/components/VueX/FormProps.vue";
+import Result from "@/components/VueX/Result.vue";
+
+export default {
+  name: "VueXComponent",
+  computed: {
+    ...mapGetters(["getClients"])
+  },
+  components: { FormProps, Result }
+}
+</script>
+
+<style scoped>
+
+</style>

@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import PropsComponent from "./pages/Props.vue"
 import VueXComponent from "./pages/VueX.vue"
 import BulmaComponent from "./pages/Bulma.vue"
-import store from './store'
+import store from './store/store.js'
 
 Vue.use(VueRouter)
 

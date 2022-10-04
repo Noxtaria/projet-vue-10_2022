@@ -14,8 +14,8 @@
 </template>
   
 <script>
-import Result from '@/components/Result.vue';
-import FormProps from '@/components/FormProps.vue';
+import Result from '@/components/Props/Result.vue';
+import FormProps from '@/components/Props/FormProps.vue';
 export default {
   name: "PropsComponent",
   components: { Result, FormProps },
