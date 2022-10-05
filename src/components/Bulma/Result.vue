@@ -1,24 +1,24 @@
 <template>
   <div class="">
-    <div :key="index" v-for="(clients, index) in clients">
+    <div>
 
       <table class="table">
         <thead>
           <tr>
-            <th><abbr title="Position">ID</abbr></th>
-            <th><abbr title="Played">Nom Commercial</abbr></th>
-            <th><abbr title="Won">Nom Juridique</abbr></th>
-            <th><abbr title="Drawn">Prospect</abbr></th>
-            <th><abbr title="Lost">Adresse</abbr></th>
-            <th><abbr title="Goals for">Ville</abbr></th>
-            <th><abbr title="Goals against">CP</abbr></th>
-            <th><abbr title="Goal difference">Telephone</abbr></th>
-            <th><abbr title="Points">Email</abbr></th>
-            <th><abbr title="Points">Secteur</abbr></th>
+            <th><abbr>ID</abbr></th>
+            <th><abbr>Nom Commercial</abbr></th>
+            <th><abbr>Nom Juridique</abbr></th>
+            <th><abbr>Prospect</abbr></th>
+            <th><abbr>Adresse</abbr></th>
+            <th><abbr>Ville</abbr></th>
+            <th><abbr>CP</abbr></th>
+            <th><abbr>Telephone</abbr></th>
+            <th><abbr>Email</abbr></th>
+            <th><abbr>Secteur</abbr></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr :key="index" v-for="(clients, index) in clients">
             <th>{{clients.id}}</th>
             <td>{{clients.nom_commercial}}</td>
             <td>{{clients.nom_juridique}}</td>
