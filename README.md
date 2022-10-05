@@ -10,6 +10,11 @@ npm install
 npm start
 ```
 
+### Ouvrir le serveur pour afficher la liste des Clients
+```
+npm run server
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
