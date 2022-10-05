@@ -94,19 +94,5 @@ export default {
 
 <style scoped>
 
-form {
-  margin-top: 15px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-  
-form input{
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 2rem;
-  justify-content: space-between;
-  width: 50%;
-  line-height: 2rem;
-  border-radius: 5px;
-}
+
   </style>
