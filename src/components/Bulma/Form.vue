@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <form @submit.prevent="createClient()">
+    <form @submit="createClient()">
       <div>
         <label for="nom_commercial">Nom Commercial</label>
         <input class="input" id="nom_commercial" v-model.trim="new_client.nom_commercial" />
