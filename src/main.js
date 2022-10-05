@@ -5,8 +5,11 @@ import PropsComponent from "./pages/Props.vue"
 import VueXComponent from "./pages/VueX.vue"
 import BulmaComponent from "./pages/Bulma.vue"
 import store from './store/store.js'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
 
 Vue.use(VueRouter)
+Vue.use(Buefy)
 
 const router = new VueRouter({
   mode: "history",

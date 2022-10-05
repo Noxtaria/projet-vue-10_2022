@@ -4,42 +4,42 @@
     <form @submit.prevent="createClient()">
       <div>
         <label for="nom_commercial">Nom Commercial</label>
-        <input id="nom_commercial" v-model.trim="new_client.nom_commercial" />
+        <input class="input" id="nom_commercial" v-model.trim="new_client.nom_commercial" />
       </div>
       <div>
         <label for="nom_juridique">Nom Juridique</label>
-        <input id="nom_juridique" v-model.trim="new_client.nom_juridique" />
+        <input class="input" id="nom_juridique" v-model.trim="new_client.nom_juridique" />
       </div>
       <div>
         <label for="prospect">Prospect</label>
-        <input id="prospect" v-model.trim="new_client.prospect" />
+        <input class="input" id="prospect" v-model.trim="new_client.prospect" />
       </div>
       <div>
         <label for="adresse">Adresse</label>
-        <input id="adresse" v-model.trim="new_client.adresse" />
+        <input class="input" id="adresse" v-model.trim="new_client.adresse" />
       </div>
       <div>
         <label for="ville">Ville</label>
-        <input id="ville" v-model.trim="new_client.ville" />
+        <input class="input" id="ville" v-model.trim="new_client.ville" />
       </div>
       <div>
         <label for="cp">CP</label>
-        <input id="cp" v-model.trim="new_client.cp" />
+        <input class="input" id="cp" v-model.trim="new_client.cp" />
       </div>
       <div>
         <label for="telephone">Téléphone</label>
-        <input id="telephone" v-model.trim="new_client.telephone" />
+        <input class="input" id="telephone" v-model.trim="new_client.telephone" />
       </div>
       <div>
         <label for="email">Email</label>
-        <input id="email" v-model.trim="new_client.email" />
+        <input class="input" id="email" v-model.trim="new_client.email" />
       </div>
       <div>
         <label for="secteur">Secteur</label>
-        <input id="secteur" v-model.trim="new_client.secteur" />
+        <input class="input" id="secteur" v-model.trim="new_client.secteur" />
       </div>
       <p>
-        <button>Enregistrer</button>
+        <button class="button is-success is-responsive">Enregistrer</button>
       </p>
     </form>
   </div>
@@ -53,7 +53,7 @@ import axios from 'axios'
 
 export default {
   name: 'FormComponent',
-  data:() => ({
+  data: () => ({
     perso: undefined,
     api: "http://localhost:3000/clients",
     id: 1,
@@ -70,29 +70,30 @@ export default {
       email: '',
       secteur: ''
     }
-    
+
   }),
   methods: {
 
-    getClients(){
+    getClients() {
       axios.get('http://localhost:3000/clients')
-          .then(response => this.clients = response.data)
+        .then(response => this.clients = response.data)
     },
 
     createClient() {
 
       axios.post('http://localhost:3000/clients', this.new_client)
-          .then(response => {
-            console.log("Le client vient d'être créé : ", response.data);
-            this.getClients();
-          })
-          .catch(err => console.log(`Quelque chose s'est mal passé : ${err.message}`))
+        .then(response => {
+          console.log("Le client vient d'être créé : ", response.data);
+          this.getClients();
+        })
+        .catch(err => console.log(`Quelque chose s'est mal passé : ${err.message}`))
     }
   }
 }
 </script>
 
 <style scoped>
-
-
-  </style>
+button {
+  margin-top: 15px
+}
+</style>

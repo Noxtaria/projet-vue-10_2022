@@ -2,7 +2,7 @@
 
   <main>
     <div>
-      <h1>Bulma</h1>
+      <h1 class="title">Bulma</h1>
 
       <Form />
       <Result />

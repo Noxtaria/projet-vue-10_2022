@@ -2,7 +2,7 @@
 
   <main>
     <div>
-      <h1>VueX</h1>
+      <h1 class="title">VueX</h1>
 
       {{getClients}}
 

@@ -2,7 +2,7 @@
 
   <main>
     <div>
-      <h1>Les Props</h1>
+      <h1 class="title">Les Props</h1>
   
       <FormProps @enregistrer="saveClient"/>
       <ResultProps v-for="c in clients" :key="c.id" :client="c"/>
