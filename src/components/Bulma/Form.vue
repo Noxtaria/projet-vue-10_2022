@@ -3,39 +3,39 @@
   <div>
     <form class="is-mobile" @submit="createClient()">
       <div>
-        <label for="nom_commercial">Nom Commercial</label>
+        <label class="label" for="nom_commercial">Nom Commercial</label>
         <input class="input" id="nom_commercial" v-model.trim="new_client.nom_commercial" />
       </div>
       <div>
-        <label for="nom_juridique">Nom Juridique</label>
+        <label class="label" for="nom_juridique">Nom Juridique</label>
         <input class="input" id="nom_juridique" v-model.trim="new_client.nom_juridique" />
       </div>
       <div>
-        <label for="prospect">Prospect</label>
+        <label class="label" for="prospect">Prospect</label>
         <input class="input" id="prospect" v-model.trim="new_client.prospect" />
       </div>
       <div>
-        <label for="adresse">Adresse</label>
+        <label class="label" for="adresse">Adresse</label>
         <input class="input" id="adresse" v-model.trim="new_client.adresse" />
       </div>
       <div>
-        <label for="ville">Ville</label>
+        <label class="label" for="ville">Ville</label>
         <input class="input" id="ville" v-model.trim="new_client.ville" />
       </div>
       <div>
-        <label for="cp">CP</label>
+        <label class="label" for="cp">CP</label>
         <input class="input" id="cp" v-model.trim="new_client.cp" />
       </div>
       <div>
-        <label for="telephone">Téléphone</label>
+        <label class="label" for="telephone">Téléphone</label>
         <input class="input" type="tel" id="telephone" v-model.trim="new_client.telephone" />
       </div>
       <div>
-        <label for="email">Email</label>
+        <label class="label" for="email">Email</label>
         <input class="input" type="email" id="email" v-model.trim="new_client.email" />
       </div>
       <div>
-        <label for="secteur">Secteur</label>
+        <label class="label" for="secteur">Secteur</label>
         <input class="input" id="secteur" v-model.trim="new_client.secteur" />
       </div>
       <p>
@@ -94,6 +94,10 @@ export default {
 
 <style scoped>
 button {
-  margin-top: 15px
+  margin-top: 15px;
+}
+div {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 </style>
