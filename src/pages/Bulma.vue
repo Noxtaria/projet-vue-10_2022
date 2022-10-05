@@ -5,7 +5,7 @@
       <h1 class="title">Bulma</h1>
 
       <Form />
-      <Result />
+      <Result/>
 
     </div>
   </main>
