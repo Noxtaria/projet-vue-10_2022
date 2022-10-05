@@ -1,23 +1,23 @@
 <template>
-  <div class="">
-    <div>
 
-      <table class="table">
-        <thead>
+    <div class="content">
+
+      <table class="table is-bordered is-mobile  ">
+        <thead class="is-mobile">
           <tr>
-            <th><abbr>ID</abbr></th>
-            <th><abbr>Nom Commercial</abbr></th>
-            <th><abbr>Nom Juridique</abbr></th>
-            <th><abbr>Prospect</abbr></th>
-            <th><abbr>Adresse</abbr></th>
-            <th><abbr>Ville</abbr></th>
-            <th><abbr>CP</abbr></th>
-            <th><abbr>Telephone</abbr></th>
-            <th><abbr>Email</abbr></th>
-            <th><abbr>Secteur</abbr></th>
+            <th class="is-primary"><abbr>ID</abbr></th>
+            <th class="is-primary"><abbr>Nom Commercial</abbr></th>
+            <th class="is-primary"><abbr>Nom Juridique</abbr></th>
+            <th class="is-primary"><abbr>Prospect</abbr></th>
+            <th class="is-primary"><abbr>Adresse</abbr></th>
+            <th class="is-primary"><abbr>Ville</abbr></th>
+            <th class="is-primary"><abbr>CP</abbr></th>
+            <th class="is-primary"><abbr>Telephone</abbr></th>
+            <th class="is-primary"><abbr>Email</abbr></th>
+            <th class="is-primary"><abbr>Secteur</abbr></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="is-mobile">
           <tr :key="index" v-for="(clients, index) in clients">
             <th>{{clients.id}}</th>
             <td>{{clients.nom_commercial}}</td>
@@ -34,7 +34,7 @@
       </table>
 
     </div>
-  </div>
+  
 
 </template>
   
@@ -57,3 +57,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  table {
+    margin-top: 35px
+  }
+
+  tr {
+    text-align: center;
+  }
+
+  </style>

@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <form @submit="createClient()">
+    <form class="is-mobile" @submit="createClient()">
       <div>
         <label for="nom_commercial">Nom Commercial</label>
         <input class="input" id="nom_commercial" v-model.trim="new_client.nom_commercial" />
@@ -28,11 +28,11 @@
       </div>
       <div>
         <label for="telephone">Téléphone</label>
-        <input class="input" id="telephone" v-model.trim="new_client.telephone" />
+        <input class="input" type="tel" id="telephone" v-model.trim="new_client.telephone" />
       </div>
       <div>
         <label for="email">Email</label>
-        <input class="input" id="email" v-model.trim="new_client.email" />
+        <input class="input" type="email" id="email" v-model.trim="new_client.email" />
       </div>
       <div>
         <label for="secteur">Secteur</label>
