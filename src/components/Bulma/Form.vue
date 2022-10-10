@@ -3,16 +3,12 @@
   <div class="layout">
     <form class="is-mobile" @submit="createClient()">
       <div>
-        <label class="label" for="nom_commercial">Nom Commercial</label>
-        <input class="input" id="nom_commercial" v-model.trim="new_client.nom_commercial" />
+        <label class="label" for="nom_commercial">Nom</label>
+        <input class="input" id="nom_commercial" v-model.trim="new_client.nom" />
       </div>
       <div>
-        <label class="label" for="nom_juridique">Nom Juridique</label>
-        <input class="input" id="nom_juridique" v-model.trim="new_client.nom_juridique" />
-      </div>
-      <div>
-        <label class="label" for="prospect">Prospect</label>
-        <input class="input" id="prospect" v-model.trim="new_client.prospect" />
+        <label class="label" for="nom_juridique">Prénom</label>
+        <input class="input" id="nom_juridique" v-model.trim="new_client.prenom" />
       </div>
       <div>
         <label class="label" for="adresse">Adresse</label>
@@ -33,10 +29,6 @@
       <div>
         <label class="label" for="email">Email</label>
         <input class="input" type="email" id="email" v-model.trim="new_client.email" />
-      </div>
-      <div>
-        <label class="label" for="secteur">Secteur</label>
-        <input class="input" id="secteur" v-model.trim="new_client.secteur" />
       </div>
       <p>
         <button class="button is-success is-responsive">Enregistrer</button>
@@ -60,15 +52,13 @@ export default {
     error: '',
     clients: [],
     new_client: {
-      nom_commercial: '',
-      nom_juridique: '',
-      prospect: '',
+      nom: '',
+      prenom: '',
       adresse: '',
       ville: '',
       cp: '',
       telephone: '',
       email: '',
-      secteur: ''
     }
 
   }),
