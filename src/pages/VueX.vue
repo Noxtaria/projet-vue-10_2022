@@ -1,13 +1,13 @@
 <template>
 
   <main>
-    <div>
-      <h1 class="title">VueX</h1>
+    <h1 class="title">VueX</h1>
+    {{getClients}}
+    <div class="layout">
 
-      {{getClients}}
 
-      <FormVueX />
-      <ResultVueX />
+      <FormVueX class="left" />
+      <ResultVueX class="right" />
 
     </div>
   </main>
@@ -32,5 +32,15 @@ export default {
 </script>
 
 <style scoped>
+.layout {
+  display: flex;
+}
 
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
 </style>

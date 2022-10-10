@@ -8,15 +8,8 @@ export default new Vuex.Store({
   state: {
 
     client: {
-      nom_commercial: '',
-      nom_juridique: '',
-      prospect: '',
-      adresse: '',
-      ville: '',
-      cp: '',
-      telephone: '',
-      email: '',
-      secteur: ''
+      nom: '',
+      prenom: ''
     }
   },
   getters: {
