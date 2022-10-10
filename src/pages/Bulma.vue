@@ -5,8 +5,8 @@
       <h1 class="title">Bulma</h1>
 
       <div class="layout">
-        <Form />
-        <Result  />
+        <Form class="left"/>
+        <Result  class="right" />
       </div>
 
     </div>
@@ -28,8 +28,18 @@ export default {
 <style scoped>
 
 .layout{
-  display: flex;
-  flex-wrap: wrap;
+display: flex;
+flex-direction: row;
 }
+
+.left{
+  max-width: 100%;
+  max-height: 100%;
+  width: 30%;
+}
+
+.right{
+  width: 70%;
+} 
 
 </style>

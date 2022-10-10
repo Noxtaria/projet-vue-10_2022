@@ -3,12 +3,12 @@
   <div class="layout">
     <form class="is-mobile" @submit="createClient()">
       <div>
-        <label class="label" for="nom_commercial">Nom</label>
-        <input class="input" id="nom_commercial" v-model.trim="new_client.nom" />
+        <label class="label" for="nom">Nom</label>
+        <input class="input" id="nom" v-model.trim="new_client.nom" />
       </div>
       <div>
-        <label class="label" for="nom_juridique">Prénom</label>
-        <input class="input" id="nom_juridique" v-model.trim="new_client.prenom" />
+        <label class="label" for="prenom">Prénom</label>
+        <input class="input" id="prenom" v-model.trim="new_client.prenom" />
       </div>
       <div>
         <label class="label" for="adresse">Adresse</label>
@@ -90,4 +90,10 @@ div {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+
+.layout{
+  max-height: 50%;
+  max-width: 50%;
+}
+
 </style>
