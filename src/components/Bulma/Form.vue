@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="layout">
     <form class="is-mobile" @submit="createClient()">
       <div>
         <label class="label" for="nom_commercial">Nom Commercial</label>

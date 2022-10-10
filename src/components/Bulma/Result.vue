@@ -2,7 +2,7 @@
 
     <div class="content">
 
-      <table class="table is-bordered is-mobile  ">
+      <table class="table is-bordered is-mobile ">
         <thead class="is-mobile">
           <tr>
             <th class="is-primary"><abbr>ID</abbr></th>
@@ -60,7 +60,9 @@ export default {
 
 <style scoped>
   table {
-    margin-top: 35px
+    margin-top: 35px;
+    
+    
   }
 
   tr {

@@ -4,8 +4,10 @@
     <div>
       <h1 class="title">Bulma</h1>
 
-      <Form />
-      <Result/>
+      <div class="layout">
+        <Form />
+        <Result  />
+      </div>
 
     </div>
   </main>
@@ -22,3 +24,12 @@ export default {
   components: { Form, Result }
 }
 </script>
+
+<style scoped>
+
+.layout{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+</style>

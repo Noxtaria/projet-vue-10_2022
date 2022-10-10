@@ -3,43 +3,15 @@
     <div>
       <form @submit.prevent="createClient()">
         <div>
-          <label for="nom_commercial">Nom Commercial</label>
-          <input id="nom_commercial" v-model.trim="new_client.nom_commercial" />
+          <label for="nom_commercial">Nom</label>
+          <input id="nom_commercial" v-model.trim="new_client.nom" />
         </div>
         <div>
-          <label for="nom_juridique">Nom Juridique</label>
-          <input id="nom_juridique" v-model.trim="new_client.nom_juridique" />
-        </div>
-        <div>
-          <label for="prospect">Prospect</label>
-          <input id="prospect" v-model.trim="new_client.prospect" />
-        </div>
-        <div>
-          <label for="adresse">Adresse</label>
-          <input id="adresse" v-model.trim="new_client.adresse" />
-        </div>
-        <div>
-          <label for="ville">Ville</label>
-          <input id="ville" v-model.trim="new_client.ville" />
-        </div>
-        <div>
-          <label for="cp">CP</label>
-          <input id="cp" v-model.trim="new_client.cp" />
-        </div>
-        <div>
-          <label for="telephone">Téléphone</label>
-          <input id="telephone" v-model.trim="new_client.telephone" />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" v-model.trim="new_client.email" />
-        </div>
-        <div>
-          <label for="secteur">Secteur</label>
-          <input id="secteur" v-model.trim="new_client.secteur" />
+          <label for="nom_juridique">Prénom</label>
+          <input id="nom_juridique" v-model.trim="new_client.prenom" />
         </div>
         <p>
-          <button>Enregistrer</button>
+          <button>Afficher</button>
         </p>
       </form>
     </div>
@@ -57,15 +29,8 @@
       id: 1,
       error: '',
       new_client: {
-        nom_commercial: '',
-        nom_juridique: '',
-        prospect: '',
-        adresse: '',
-        ville: '',
-        cp: '',
-        telephone: '',
-        email: '',
-        secteur: ''
+        nom: '',
+        prenom: ''
       }
       
     }),
