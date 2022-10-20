@@ -1,75 +1,68 @@
 <template>
 
-    <div class="content">
+  <div class="content">
 
-      <table class="table is-bordered is-mobile ">
-        <thead class="is-mobile">
-          <tr>
-            <th class="is-primary"><abbr>ID</abbr></th>
-            <th class="is-primary"><abbr>Nom</abbr></th>
-            <th class="is-primary"><abbr>Prénom</abbr></th>
-            <th class="is-primary"><abbr>Adresse</abbr></th>
-            <th class="is-primary"><abbr>Ville</abbr></th>
-            <th class="is-primary"><abbr>CP</abbr></th>
-            <th class="is-primary"><abbr>Telephone</abbr></th>
-            <th class="is-primary"><abbr>Email</abbr></th>
-          </tr>
-        </thead>
-        <tbody class="is-mobile">
-          <tr :key="index" v-for="(clients, index) in clients">
-            <th>{{clients.id}}</th>
-            <td>{{clients.nom}}</td>
-            <td>{{clients.prenom}}</td>
-            <td>{{clients.adresse}}</td>
-            <td>{{clients.ville}}</td>
-            <td>{{clients.cp}}</td>
-            <td>{{clients.telephone}}</td>
-            <td>{{clients.email}}</td>
-          </tr>
-        </tbody>
-      </table>
 
-    </div>
-  
+      <b-table v-if="clients"
+          :data="clients"
+          :columns="columns"
+          :debounce-search="1000">
+      </b-table>
+
+      <b-loading v-else :is-full-page="true"  :can-cancel="true"></b-loading>
+
+
+  </div>
+
 
 </template>
-  
+
 <script>
 import axios from 'axios';
 
 export default {
-  name: 'ResultComponent',
-  data: () => ({
-    clients: null
-  }),
-  methods: {
-    getClients() {
-      axios.get('http://localhost:3000/clients')
-        .then(response => this.clients = response.data)
-    }
-  },
-  mounted() {
-    this.getClients();
+name: 'ResultComponent',
+data: () => ({
+  clients: null,
+  columns: [
+    { field: 'id', label: 'ID', width: 100, searchable: true },
+    { field: 'nom', label: 'Nom', searchable: true },
+    { field: 'prenom', label: 'Prénom', searchable: true },
+    { field: 'adresse', label: 'Adresse' },
+    { field: 'ville', label: 'Ville' },
+    { field: 'cp', label: 'CP' },
+    { field: 'telephone', label: 'Telephone' },
+    { field: 'email', label: 'Email' }
+  ]
+}),
+methods: {
+  getClients() {
+    axios.get('http://localhost:3000/clients')
+      .then(response => this.clients = response.data)
   }
+},
+mounted() {
+  this.getClients();
+}
 }
 </script>
 
 <style scoped>
-  table {
-    margin-top: 35px;
-    
-    
-  }
+table {
+  margin-top: 35px;
+  
+  
+}
 
-  tr {
-    text-align: center;
-  }
+tr {
+  text-align: center;
+}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    max-width: 100%;
-  }
+.content {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  max-width: 100%;
+}
 
-  </style>
+</style>
